@@ -1,4 +1,12 @@
 def recursive_dfs(start: int, graph: list[list[int]]):
+    """
+    Traverse the graph with a DFS, and return all compete paths from the start node.
+    Args:
+        start: The node to start the search from.
+        graph: The graph to search, represented as an adjacency list.
+    Returns:
+        A list of paths, where each path is a list of nodes.
+    """
     paths = []
     order = []
 
