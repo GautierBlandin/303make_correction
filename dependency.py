@@ -1,4 +1,12 @@
 class Dependency:
+    """
+    Dependency class
+    Attributes:
+        name: Name of the dependency
+        dep_type: Type of the dependency (file or rule)
+        dependencies: List of dependencies (only for rule)
+        command: Command to execute (only for rule)
+    """
     def __init__(self, name, dep_type, dependencies=None, command=None):
         self.name = name
         self.dep_type = dep_type
