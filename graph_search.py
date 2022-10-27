@@ -1,8 +1,7 @@
 import queue
-from typing import Callable
 
 
-def recursive_dfs(start: int, graph: list[list[int]]):
+def find_all_paths(start: int, graph: list[list[int]]):
     """
     Traverse the graph with a DFS, and return all compete paths from the start node.
     Args:
