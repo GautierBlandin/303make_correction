@@ -1,6 +1,12 @@
-input = "tty: tty.o fs.h"
+import part1
+import part2
+import sys
 
-def parse(input):
-    input = input.split(" ")
-    input = [i.split(":") for i in input]
-    return input
+if __name__ == "__main__":
+    if len(sys.argv) <= 2:
+        print(f"Too few arguments ({len(sys.argv) -1})")
+        exit(84)
+    if len(sys.argv) == 2:
+        part1.execute_part_1(sys.argv[1])
+    if len(sys.argv) == 3:
+        part2.execute_part_2(sys.argv[1], sys.argv[2])
