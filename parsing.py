@@ -41,5 +41,5 @@ def parse_rule(rule_line: str) -> tuple[str, list[str]]:
         (rule name, dependencies)
     """
     rule, dependencies = rule_line.split(":")
-    dependencies = [dependency for dependency in dependencies.split(" ")]
+    dependencies = [dependency for dependency in dependencies.split(" ") if dependency != '']
     return rule, dependencies
