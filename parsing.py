@@ -2,6 +2,11 @@ from dependency import Dependency
 
 
 def read_file(filename) -> str:
+    """
+    Read the file and return its content
+    Args:
+        filename: File to read
+    """
     try:
         with open(filename, 'r') as f:
             return f.read()
