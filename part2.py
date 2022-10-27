@@ -17,6 +17,8 @@ def execute_part_2(filename: str, dep: str):
     adjacency_matrix, name_to_index, index_to_name = graph_generation.generate_graph(dependencies_dict)
     adjacency_list = graph_format_conversion.adjacency_matrix_to_adjacency_list(adjacency_matrix)
 
+    if dep not in name_to_index:
+        exit(84)
     dep_index = name_to_index[dep]
     order = graph_search.bfs_order(dep_index, adjacency_list)
     printing.print_command_order(order, index_to_name, dependencies_dict)
