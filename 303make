@@ -11,4 +11,3 @@ if __name__ == "__main__":
         part1.execute_part_1(sys.argv[1])
     if len(sys.argv) == 3:
         part2.execute_part_2(sys.argv[1], sys.argv[2])
-
