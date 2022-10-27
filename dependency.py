@@ -1,5 +1,5 @@
 class Dependency:
-    def __init__(self, name, dep_type, dependencies, command=None):
+    def __init__(self, name, dep_type, dependencies=None, command=None):
         self.name = name
         self.dep_type = dep_type
         self.dependencies = dependencies
