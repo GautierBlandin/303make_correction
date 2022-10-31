@@ -20,5 +20,5 @@ def execute_part_2(filename: str, dep: str):
     if dep not in name_to_index:
         exit(84)
     dep_index = name_to_index[dep]
-    order = graph_search.bfs_order(dep_index, adjacency_list)
+    order = graph_search.bfs_with_top_order(dep_index, adjacency_list)
     printing.print_command_order(order, index_to_name, dependencies_dict)
