@@ -31,6 +31,8 @@ def bfs_order(start: int, graph: list[list[int]]):
     Args:
         start: The node to start the search from.
         graph: The graph to search, represented as an adjacency list.
+    Returns:
+        The order of the nodes visited.
     """
     n = len(graph)
     visited = [False] * n
@@ -45,7 +47,7 @@ def bfs_order(start: int, graph: list[list[int]]):
             if not visited[child]:
                 visited[child] = True
                 q.put(child)
-    return order[1:]
+    return order
 
 
 def bfs_with_top_order(start: int, graph: list[list[int]]) -> list[int]:
@@ -89,6 +91,6 @@ def bfs_with_top_order(start: int, graph: list[list[int]]) -> list[int]:
             if in_degree[child] == 0:
                 q.put(child)
 
-    return order[1:]
+    return order
 
 
